@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Creepster', cursive;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100%;
+    background: radial-gradient( hsl(24, 84%, 57%) 0%,#924905 100% );
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scoreboard{
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    border: solid white 1px;
+    border-radius: 15px;
+    margin-top: 50px;
+    align-items: center;
+    padding: 30px;
+}
+
+.scoreboard h1{
+    color: white;
+    line-height: 40px;
+    font-size: 48px;
+}
+
+.score{
+    width: 150px;
+    height: 114px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score h1{
+    color: #bb7e4c;
+    font-size: 40px;
+}
+
+.score span{
+    color: #ca780d;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+
+.hands{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 476px;
+    height: 430px;
+    justify-content: center;
+    margin-top: 100px;
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hands .paper{
+    margin-right: 20px;
+}
+
+.rock{
+    margin-left: 20px;
+}
+
+.hands img{
+    cursor: pointer;
+    transition: .25s;
+
+}
+
+.hands img:hover{
+    transform: translate3d(0px, -10px,0px);
+}
+
+.contest{
+    display: none;
+    flex-direction: row;
+    width: 900px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contest > div{
+    flex: 1;
+}
+
+.contest img{
+    width: 275px;
+    height: 275px;
+}
+
+.contest h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.handimagecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.referee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.referee h1{
+    font-size: 45px;
+}
+
+.referee .newgame{
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: .15s;
+}
+
+.newgame:hover{
+    background-color: bisque;
+    transform: translate3d(0px, -3px, 0px);
+}
+
+.rules{
+    color: white;
+    border-radius: 6px;
+    padding: 15px 25px;
+    border: solid white 1px;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.rules:hover{
+    transform: translate3d(0px, -4px, 0px);
+}
+
+
+.ruleimage{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   display: none;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.ruleimage #imgrule{
+    margin-top: 50px;
+    height: auto;
+    width: 400px;
+}
+
+.ruleimage #close{
+    height: auto;
+    margin-top: 200px;
+    width: 20px;
+    cursor: pointer;
+}
+
+
+/* Mobile Phone */
+
+@media (max-width: 600px){
+    
+    .scoreboard{
+        width: 90%;
+        height: 150px;
+    }
+
+    .hands{
+        width: 90%;
+        height: 90%;
+        min-width: 600px;
+    }
+    .hands img{
+        width: auto;
+        height: auto;
+    }
+
+    .rules{
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+
+    .contest{
+        width: 500px;
+        height: 100vh;
+        min-width: 600px;
+        margin: -150px 0px;
+    }
+
+
+
+    .contest img{
+        width: auto;
+        height: auto;
+    }
+}

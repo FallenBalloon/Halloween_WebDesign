@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Font family Barlow-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> 
+
+        <!-- Favicon-->
+
+
+</head>
+<body>
+    <!-- Rules Window -->
+    <div class="ruleimage">
+        <img id="imgrule" src="images/image-rules.svg">
+        <img id="close" src="images/icon-close.svg" onclick="closeRule()">
+    </div>
+
+
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="title">
+               <h1>ROCK <br>
+                PAPER <br>
+                SCISSORS</h1> 
+            </div>
+            <div class="score">
+                <span>SCORE</span>
+                <h1>0</h1>
+            </div>
+        </div>
+<!-- Event screen-->
+        <div class="hands">
+            <div class="paper">
+                <img src="images/Paper2.png" onclick="pickUserHand('paper')">
+            </div>
+            <div class="rock">
+                <img src="images/Rock2.png" onclick="pickUserHand('rock')">
+            </div>
+            <div class="scissors">
+                <img src="images/Scissors2.png" onclick="pickUserHand('scissors')">
+            </div>
+        </div>
+<!-- Event winning screen-->
+        <div class="contest">
+            <div class="userhand">
+                <h1> You Picked</h1>
+                <div class="handimagecontainer">
+                    <img id="userpickimage" src="images/Paper.png" alt="">
+                </div>
+            </div>
+            <div class="referee">
+                <div class="decision">
+                    <h1> You Win</h1>
+                </div>
+                <div class="newgame" onclick="restartGame()"> 
+                    PLAY AGAIN
+                </div>
+            </div>
+            <div class="computerhand">
+                <h1>The House Picked</h1>
+                <div class="handimagecontainer">
+                    <img id="comupterpickimage" src="images/Paper.png">
+                </div>
+            </div>
+        </div>
+<!-- Rules Screen -->
+        <div class="rules" onclick="rulesWindow()">
+            RULES
+        </div>
+    </div>
+
+<script src="jss.js"></script>
+
+</body>
+</html>
